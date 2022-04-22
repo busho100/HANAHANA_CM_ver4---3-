@@ -1,3 +1,3 @@
 Hello HanaHana
 Hello Django
-Hello Git
+hello Git
