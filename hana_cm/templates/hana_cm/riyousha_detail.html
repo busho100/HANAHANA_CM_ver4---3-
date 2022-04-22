@@ -1,0 +1,27 @@
+{% extends './base.html' %}
+{% block content %}
+    <h1>氏名　{{ riyousha.name }}</h1>
+
+        <p>被保険者番号：　{{riyousha.hihoken_no}}</p>
+        <p>カナ　　　　：　{{riyousha.name_kana}}</p>
+        <p>性別　　　　:  {{riyousha.sex}}</p>
+        <p>入力日　　　：　{{riyousha.nyuuryoku_date}}</p>
+
+        <div>
+            <a href='{% url "hana_cm:index" %}'><button class="py-o">一覧</button></a> |
+            <a href='{% url "hana_cm:update" riyousha.pk %}'><button class="py-o">編集</button></a> |
+            <a href='{% url "hana_cm:delete" riyousha.pk %}'><button class="py-o">削除</button></a> | 
+            <a href='{% url "hana_cm:kdetail" riyousha.pk %}'><button class="py-o">認定情報</button></a> | 
+        </div>
+        <div>
+            
+           {% comment %}  <a href='{% url "hana_cm:update" riyousha.pk %}'>編集</a> |
+            <a href='{% url "hana_cm:delete" riyousha.pk %}'>削除</a> |    {% endcomment %} 
+        </div>
+        <div>
+            {% comment %} <a href='{% url "hana_cm:riyousha_create" %}'>利用者の追加</a>  {% endcomment %} 
+        </div> 
+        <div>
+            <a href='JavaScript:history.back()'>&lt;戻る</a>
+        </div>     
+{% endblock %} 
