@@ -12,4 +12,5 @@ urlpatterns = [
     path('<int:pk>/k_create/', views.youkaigo_create.as_view(), name='kcreate'),
     path('<int:pk>/k_detail/',views.youkaigo_DetailView.as_view(), name='kdetail'),
     path('<int:pk>/k_update/', views.youkaigo_UpdateView.as_view(), name='kupdate'),
+    path(r'',Find.as_view(),name='find'),
 ]

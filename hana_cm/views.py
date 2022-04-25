@@ -6,6 +6,8 @@ from .models import Riyousha,YouKaigoDo
 from django.shortcuts import redirect
 from django.contrib.admin.widgets import AdminDateWidget
 from django.shortcuts import render, get_object_or_404
+from django.views import View
+from django.forms import FindForm
 
 # Create your views here.
 class IndexView(generic.ListView):
@@ -53,4 +55,21 @@ class youkaigo_UpdateView(generic.edit.UpdateView):
 
 class youkaigo_DetailView(generic.DetailView):
     model = YouKaigoDo
+
+class Find(View):
+
+    def __init__(self):
+        self.context = {
+            'title': "要介護認定",
+            'message':'認定状況',
+            'form':FindForm()
+        }
+
+    def get(self,request):
+        return render(request, 'hana_cm/find.html', self.context)
+
+    def post(self,request):
+        self.context['form'] = FindForm(request.POST)
+        return render(request, 'hana_cm/find.html', self.context)
+
     
