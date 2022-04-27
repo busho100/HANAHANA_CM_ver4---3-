@@ -7,7 +7,7 @@ from django.shortcuts import redirect
 from django.contrib.admin.widgets import AdminDateWidget
 from django.shortcuts import render, get_object_or_404
 from django.views import View
-from django.forms import FindForm
+#from django.forms import FindForm
 
 # Create your views here.
 class IndexView(generic.ListView):
@@ -72,4 +72,5 @@ class Find(View):
         self.context['form'] = FindForm(request.POST)
         return render(request, 'hana_cm/find.html', self.context)
 
-    
+class Youkaigodo_IndexView(generic.ListView):
+    model = YouKaigoDo
