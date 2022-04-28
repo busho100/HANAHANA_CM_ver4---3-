@@ -1,10 +1,10 @@
 {% extends './base.html' %}
 {% block content %}
-<h1>要介護認定の{{ object|yesno:'更新,作成'}}</h1>
+<h1>要介護認定の{{ object|yesno:'変更後、上書き保存,作成'}}</h1>
 
 <form action='' method='post'>{% csrf_token %}
     {{ form.as_p }}
-    <button type='submit' class='submit'>{{ object|yesno:'更新,作成'}}</button>
+    <button type='submit' class='submit'>{{ object|yesno:'変更後、上書き保存,作成'}}</button>
 </form>
 <div>
     <a href='JavaScript:history.back()'>&lt; 戻る</a>

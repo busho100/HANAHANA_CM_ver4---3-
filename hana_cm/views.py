@@ -47,7 +47,7 @@ class youkaigo_create(generic.edit.CreateView):
 class youkaigo_UpdateView(generic.edit.UpdateView):
     model = YouKaigoDo
     fields = '__all__'
-    success_url = reverse_lazy('hana_cm:index')
+    success_url = reverse_lazy('hana_cm:youkaigodo')
 
 ''' class youkaigo_update(generic.edit.UpdateView):
     model = YouKaigoDo
@@ -74,3 +74,7 @@ class Find(View):
 
 class Youkaigodo_IndexView(generic.ListView):
     model = YouKaigoDo
+
+class Youkaigodo_DeleteView(generic.edit.DeleteView):
+    model = YouKaigoDo
+    success_url = reverse_lazy('hana_cm:youkaigodo')

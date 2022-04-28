@@ -9,8 +9,9 @@ urlpatterns = [
     path('create/', views.CreateView.as_view(), name='create'),
     path('<int:pk>/update/', views.UpdateView.as_view(), name='update'),
     path('<int:pk>/delete/', views.DeleteView.as_view(), name='delete'),
-    path('<int:pk>/k_create/', views.youkaigo_create.as_view(), name='kcreate'),
-    path('<int:pk>/k_detail/',views.youkaigo_DetailView.as_view(), name='kdetail'),
-    path('<int:pk>/k_update/', views.youkaigo_UpdateView.as_view(), name='kupdate'),
+    path('k_create/', views.youkaigo_create.as_view(), name='kcreate'),
+    path('k_detail/<int:pk>/',views.youkaigo_DetailView.as_view(), name='kdetail'),
+    path('k_update/<int:pk>/', views.youkaigo_UpdateView.as_view(), name='kupdate'),
     path('youkaigodo/', views.Youkaigodo_IndexView.as_view(), name='youkaigodo'),
+    path('k_delete/<int:pk>/', views.Youkaigodo_DeleteView.as_view(), name='kdelete'),
 ]

@@ -21,10 +21,11 @@
     {% endfor %} 
 </table>
     <div>
-        <a href='{% url "hana_cm:create" %}'><button class="py-o">利用者の追加</button></a>  
+        <a href='{% url "hana_cm:create" %}'><button class="py-o">利用者の追加</button></a>
+        <a href='{% url "hana_cm:youkaigodo" %}'><button class="py-o">要介護認定</button></a>    
     </div> 
 
-    {% comment %} <a href='{% url "hana_cm:kdetail" riyousha.pk %}'>認定情報</a> | {% endcomment %} 
+    {% comment %} <a href='{% url "hana_cm:kcreate" youkaigodo.pk %}'>認定情報</a> |  {% endcomment %}
     <div>
         <a href='JavaScript:history.back()'>&lt;戻る</a>
     </div>     

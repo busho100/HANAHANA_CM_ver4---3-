@@ -42,7 +42,7 @@ class YouKaigoDo(models.Model):
         ]
 
     def get_absolute_url(self):
-        return reverse('hana_cm:detail', kwargs={'pk': self.pk}) 
+        return reverse('hana_cm:kdetail', kwargs={'pk': self.pk}) 
 
 ''' class NyuuryokuDate(models.Model):
     riyousha = models.ForeignKey('Riyousha', on_delete=models.CASCADE,\

@@ -12,14 +12,14 @@
 
         <div>
             <a href='{% url "hana_cm:index" %}'><button class="py-o">一覧</button></a> |
-            <a href='{% url "hana_cm:kcreate" youkaigodo.riyousha.pk %}'><button class="py-o">登録</button></a> | 
-            <a href='{% url "hana_cm:kupdate" youkaigodo.riyousha.pk %}'><button class="py-o">上書き保存</button></a> |
-            {% comment %}<a href='{% url "hana_cm:delete" riyousha.pk %}'>削除</a> |    
+            <a href='{% url "hana_cm:kupdate" youkaigodo.id %}'><button class="py-o">変更後、上書き保存</button></a> |
+            <a href='{% url "hana_cm:kcreate"  %}'><button class="py-o">要介護認定の追加</button></a> |  
+            <a href='{% url "hana_cm:kdelete" youkaigodo.id %}'><button class="py-o">削除</button></a> |  
         </div>
         
         <div>
-             <a href='{% url "hana_cm:riyousha_create" %}'>利用者の追加</a>  
-        </div> {% endcomment %}  
+             <a href='{% url "hana_cm:kcreate" %}'>利用者の追加</a>  
+        </div> 
         
         <div>
             <a href='JavaScript:history.back()'>&lt;戻る</a>
