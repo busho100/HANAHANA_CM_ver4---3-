@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 from .models import Riyousha,YouKaigoDo
-#from .forms import YoykaigoDoForm
 from django.shortcuts import redirect
 from django.contrib.admin.widgets import AdminDateWidget
 from django.shortcuts import render, get_object_or_404
