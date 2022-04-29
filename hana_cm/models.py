@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from django import forms
+
 
 # Create your models here.
 #利用者クラス
@@ -12,7 +14,7 @@ class Riyousha(models.Model):
     sex = models.BooleanField()
     pub_date = models.DateTimeField(auto_now_add=True)
     #slug = models.SlugField(max_length=20, blank=True, null=True)
-   
+    
 
     def __str__(self):
         return self.name

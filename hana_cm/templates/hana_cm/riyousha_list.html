@@ -13,7 +13,9 @@
     <tr>
         <td>{{riyousha.hihoken_no}}</td>
         <td><a href ='{% url "hana_cm:detail" riyousha.pk %}'>{{riyousha.name}}</a></td>  
-        <td>{{riyousha.sex}}</td>
+        <td>{% if riyousha.sex == False %}女性{% endif %}
+            {% if riyousha.sex == True %}男性{% endif %}
+        </td>
         <td>{{riyousha.nyuuryoku_date}}</td>     
     </tr> 
        

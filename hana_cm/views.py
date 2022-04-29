@@ -7,6 +7,7 @@ from django.shortcuts import redirect
 from django.contrib.admin.widgets import AdminDateWidget
 from django.shortcuts import render, get_object_or_404
 from django.views import View
+from .forms import CreateForm,UpdateForm
 #from django.forms import FindForm
 
 # Create your views here.
@@ -19,7 +20,10 @@ class DetailView(generic.DetailView):
 
 class CreateView(generic.edit.CreateView):
     model = Riyousha
-    fields = '__all__'
+    #fields = '__all__'
+    form_class = CreateForm
+    model = Riyousha
+    
 
 class Riyousha_CreateView(generic.edit.CreateView):
     model = Riyousha
@@ -27,7 +31,8 @@ class Riyousha_CreateView(generic.edit.CreateView):
 
 class UpdateView(generic.edit.UpdateView):
     model = Riyousha
-    fields = '__all__'
+    form_class = UpdateForm
+    model = Riyousha
     success_url = reverse_lazy('hana_cm:index')
 
 class DeleteView(generic.edit.DeleteView):

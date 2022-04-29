@@ -2,10 +2,11 @@
 {% block content %}
     <h1>氏名　{{ riyousha.name }}</h1>
 
-        <p>被保険者番号：　{{riyousha.hihoken_no}}</p>
-        <p>カナ　　　　：　{{riyousha.name_kana}}</p>
-        <p>性別　　　　:  {{riyousha.sex}}</p>
-        <p>入力日　　　：　{{riyousha.nyuuryoku_date}}</p>
+        <p>被保険者番号：　　{{riyousha.hihoken_no}}</p>
+        <p>カナ　　　　：　　{{riyousha.name_kana}}</p>
+        <p>性別　　　　:  　　{% if riyousha.sex == False %}女性{% endif %}
+                         　　{% if riyousha.sex == True %}男性{% endif %}</p>
+        <p>入力日　　　：　　{{riyousha.nyuuryoku_date}}</p>
 
         <div>
             <a href='{% url "hana_cm:index" %}'><button class="py-o">一覧</button></a> |
