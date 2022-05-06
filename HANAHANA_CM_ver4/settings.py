@@ -40,12 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hana_cm.apps.HanaCmConfig',
-    'bootstrap4',
+    #'bootstrap4',
     #'bootstrap_datepicker_plus',
 ]
-BOOTSTRAP4 = {
+''' BOOTSTRAP4 = {
     'include_jquery': True,
-}
+} '''
 
 
 MIDDLEWARE = [
@@ -71,10 +71,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-            ],
-           'builtins':[ 
-                'bootstrap4.templatetags.bootstrap4',
-            ], 
+            ]
+           
         },
     },
 ]
