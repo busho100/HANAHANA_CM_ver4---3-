@@ -1,1 +1,1 @@
-web: gunicorn hana_cm.wsgi
+web: gunicorn hanahanacm.wsgi
