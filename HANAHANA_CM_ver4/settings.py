@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import django_heroku
+#import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hana_cm.apps.HanaCmConfig',
     'bootstrap4',
-    'bootstrap_datepicker_plus',
+    #'bootstrap_datepicker_plus',
 ]
 BOOTSTRAP4 = {
     'include_jquery': True,
@@ -135,4 +135,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
